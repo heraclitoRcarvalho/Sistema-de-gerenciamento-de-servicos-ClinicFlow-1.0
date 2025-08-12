@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Funcionários</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>Clinic Flow</h1>
+      <img src="logo.png" alt="Logo da Clinic Flow" class="logo" />
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="agendamento.html">Agendar</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <h2 id="form-title">Login de Funcionário</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn-login">Entrar</button>
+      </div>
+      <p id="toggle-text">Não tem uma conta? <a href="#" id="toggle-link">Cadastre-se</a></p>
+      <p id="login-message" class="mensagem-envio"></p>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+  <script src="menu.js"></script> <!-- JavaScript do header -->
+</body>
+</html>

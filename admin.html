@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel Administrativo - Agendamentos</title>
+  <link rel="stylesheet" href="login.css" />
+  <style>
+    /* Estilos básicos adicionais para a tabela */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #2E86C1;
+      color: white;
+    }
+    .logout-btn {
+      background-color: #2E86C1;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      float: right;
+    }
+    .logout-btn:hover {
+      background-color: #1B4F72;
+    }
+    #loading {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #2E86C1;
+    }
+    #error-msg {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Painel de Agendamentos</h2>
+    <button class="logout-btn" id="logout-btn">Sair</button>
+
+    <div id="loading">Carregando agendamentos...</div>
+    <div id="error-msg" style="display:none;"></div>
+
+    <table id="agendamentos-table" style="display:none;">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Observação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Agendamentos serão inseridos aqui dinamicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

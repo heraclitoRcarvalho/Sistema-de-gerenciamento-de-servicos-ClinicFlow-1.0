@@ -1,0 +1,736 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #2E86C1;
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    cursor: default;
+    user-select: none;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+    background-color: #1b4f72;
+    outline: none;
+}
+
+.nav-list li a.active {
+    background-color: #154a79;
+}
+
+/* Banner */
+.banner {
+    background: url('banner.jpg') center center/cover no-repeat;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    box-shadow: inset 0 0 0 2000px rgba(46,134,193,0.65);
+}
+
+.banner-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+.banner-content p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    background-color: #117aeb;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(17,122,235,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0f6cd9;
+    box-shadow: 0 8px 20px rgba(15,108,217,0.8);
+    outline: none;
+}
+
+/* Sobre */
+.sobre {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+    color: #2E86C1;
+}
+
+.sobre p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Galeria / Carrossel */
+.galeria {
+    padding-bottom: 50px;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #2E86C1;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 35px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.7s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    user-select: none;
+}
+
+.legenda {
+    margin-top: 14px;
+    font-size: 1.15rem;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Botões do carrossel */
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(46, 134, 193, 0.85);
+    border: none;
+    color: white;
+    font-size: 32px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.carrossel button:hover,
+.carrossel button:focus {
+    background-color: rgba(46, 134, 193, 1);
+    outline: none;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+/* Footer */
+footer {
+    background-color: #2E86C1;
+    color: white;
+    text-align: center;
+    padding: 22px 0;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+/* Back to top */
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    user-select: none;
+    z-index: 1000;
+}
+
+/* Animação fade */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2E86C1;
+        flex-direction: column;
+        width: 180px;
+        display: none;
+        border-radius: 0 0 0 10px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .nav-list.show {
+        display: flex;
+    }
+    .nav-list li {
+        margin: 12px 0;
+    }
+    .nav-list li a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+    .banner-content h2 {
+        font-size: 2.2rem;
+    }
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Formulário de Agendamento */
+.formulario-agendamento {
+  background: linear-gradient(135deg, #e9f2f7, #fdfefe);
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 800px;
+  animation: fadeIn 1s ease;
+}
+
+.formulario-agendamento h2 {
+  text-align: center;
+  color: #2b6777;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.formulario-agendamento p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2b6777;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2b6777;
+  box-shadow: 0 0 8px rgba(43, 103, 119, 0.3);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-agendar {
+  background-color: #2b6777;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(43, 103, 119, 0.4);
+  width: 100%;
+}
+
+.btn-agendar:hover {
+  background-color: #1e4c5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 76, 90, 0.5);
+}
+
+.mensagem-envio {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+/* Estilo de sucesso */
+.mensagem-envio.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Estilo de erro */
+.mensagem-envio.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.mensagem-envio.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .formulario-agendamento {
+    padding: 2rem 1rem;
+  }
+
+  .btn-agendar {
+    font-size: 1rem;
+  }
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* SOBRE NÓS */
+.sobre {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin: 40px auto;
+  max-width: 960px;
+  padding: 40px 30px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.sobre h2 {
+  margin-bottom: 25px;
+  color: #2E86C1;
+  font-size: 2.2rem;
+}
+
+.sobre p {
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.sobre-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  width: 300px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle at center, #d4eafc 0%, transparent 70%);
+  opacity: 0.1;
+  z-index: 0;
+  transform: rotate(25deg);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2E86C1;
+  z-index: 1;
+  position: relative;
+}
+
+.card p,
+.card ul {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  z-index: 1;
+  position: relative;
+}
+
+.card ul {
+  padding-left: 18px;
+  list-style-type: "✔️ ";
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .sobre-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contato */
+.contato {
+  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(46, 134, 193, 0.3);
+  max-width: 600px;
+  margin: 50px auto 80px;
+  padding: 40px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.contato h2 {
+  color: #2E86C1;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.contato label {
+  font-weight: 600;
+  color: #264a72;
+  text-align: left;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Input styles with icons */
+.contato input[type="text"],
+.contato input[type="email"],
+.contato input[type="tel"],
+.contato textarea {
+  padding: 12px 40px 12px 40px;
+  border: 2px solid #a9c0f5;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  font-family: inherit;
+  color: #333;
+  outline-offset: 2px;
+  outline-color: transparent;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Focus animation */
+.contato input[type="text"]:focus,
+.contato input[type="email"]:focus,
+.contato input[type="tel"]:focus,
+.contato textarea:focus {
+  border-color: #2E86C1;
+  box-shadow: 0 0 8px rgba(46, 134, 193, 0.6);
+  outline-color: #2E86C1;
+}
+
+/* Icons inside inputs */
+.contato input[type="text"] {
+  background-image: url('icons/user.svg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px;
+}
+
+.contato input[type="email"] {
+  background-image: url('icons/email.svg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px;
+}
+
+.contato input[type="tel"] {
+  background-image: url('icons/phone.svg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px;
+}
+
+.contato textarea {
+  background-image: url('icons/message.svg');
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+  background-size: 20px 20px;
+  min-height: 100px;
+}
+
+/* Button */
+.contato button[type="submit"] {
+  background-color: #2E86C1;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(46, 134, 193, 0.5);
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.contato button[type="submit"]:hover {
+  background-color: #1B4F72;
+  box-shadow: 0 6px 15px rgba(27, 79, 114, 0.8);
+}
+
+/* Ripple effect */
+.contato button[type="submit"]::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s, opacity 1s;
+  opacity: 0;
+}
+
+.contato button[type="submit"]:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: 0s;
+}
+
+/* Feedback message */
+#form-feedback {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#form-feedback.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+#form-feedback.error {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contato {
+    padding: 30px 20px;
+  }
+
+  .contato input[type="text"],
+  .contato input[type="email"],
+  .contato input[type="tel"],
+  .contato textarea {
+    padding-left: 35px;
+  }
+}

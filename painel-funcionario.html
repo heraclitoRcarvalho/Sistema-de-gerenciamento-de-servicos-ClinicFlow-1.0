@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Funcionário</title>
+  <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>Clinic Flow</h1>
+      <img src="logo.png" alt="Logo da Clinic Flow" class="logo">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="agendamento.html">Agendar</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <main>
+  <h2>Agendamentos Recebidos</h2>
+
+  <!-- FILTROS -->
+  <div id="filtros" style="margin-bottom: 20px;">
+    <label for="filtro-nome">Nome:</label>
+    <input type="text" id="filtro-nome" placeholder="Buscar por nome">
+
+    <label for="filtro-data">Data:</label>
+    <input type="date" id="filtro-data">
+
+    <label for="horaInicio">De:</label>
+    <input type="time" id="horaInicio">
+
+    <label for="horaFim">Até:</label>
+    <input type="time" id="horaFim">
+
+    <button id="aplicarFiltro">Filtrar</button>
+    <button id="limparFiltro" style="margin-left: 10px;">Limpar Filtros</button>
+  </div>
+
+  <!-- Ordenação -->
+   <div id="ordenacao" style="margin-bottom: 20px;">
+  <label for="ordenarPor">Ordenar por:</label>
+  <select id="ordenarPor">
+    <option value="">Nenhum</option>
+    <option value="data-recente">Data (mais recente)</option>
+    <option value="data-antiga">Data (mais antiga)</option>
+    <option value="hora-crescente">Horário (mais cedo)</option>
+    <option value="hora-decrescente">Horário (mais tarde)</option>
+  </select>
+    </div>
+
+
+  <!-- AGENDAMENTOS PENDENTES -->
+  <section id="agendamentos-container" class="agendamento-secao">
+    <h3>Consultas Pendentes</h3>
+    <div class="lista-agendamentos"></div>
+  </section>
+
+  <!-- AGENDAMENTOS EM ANDAMENTO -->
+  <section id="agendamentos-andamento" class="agendamento-secao">
+    <h3>Consultas em Andamento</h3>
+    <div class="lista-agendamentos"></div>
+  </section>
+
+  <!-- AGENDAMENTOS CONCLUÍDOS -->
+  <section id="agendamentos-concluidos" class="agendamento-secao">
+    <h3>Consultas Concluídas</h3>
+    <div class="lista-agendamentos"></div>
+  </section>
+
+  <!-- AGENDAMENTOS CANCELADOS -->
+  <section id="agendamentos-cancelados" class="agendamento-secao">
+    <h3>Consultas Canceladas</h3>
+    <div class="lista-agendamentos"></div>
+  </section>
+</main>
+
+
+  <script src="painel.js"></script>
+</body>
+</html>

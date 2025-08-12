@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clinic Flow</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button id="back-to-top" title="Voltar ao topo">↑</button>
+
+    <header>
+        <div class="container header-container">
+            <h1>Clinic Flow</h1>
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="agendamento.html">Agendar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                        <!-- Aqui adiciona o login -->
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <button class="menu-toggle">&#9776;</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container banner-content">
+            <h2>Seu bem-estar em primeiro lugar</h2>
+            <p>Cuidando da sua saúde com dedicação e amor.</p>
+            <a href="agendamento.html" class="btn-primary">Agende sua consulta</a>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="container">
+            <h2>Bem-vindo à Clinic Flow</h2>
+            <p>Atuamos com excelência em saúde e qualidade de vida. Nossa missão é proporcionar atendimentos humanizados, visando sempre o bem-estar de nossos pacientes.</p>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="container">
+            <h2>Nosso Espaço</h2>
+            <div class="carrossel">
+                <div class="slide active">
+                    <img src="fisioterapia1.jpg" alt="Sala de fisioterapia moderna" />
+                    <p class="legenda">Sala de fisioterapia moderna</p>
+                </div>
+                <div class="slide">
+                    <img src="fisioterapia2.jpg" alt="Equipamentos de fisioterapia" />
+                    <p class="legenda">Equipamentos de última geração</p>
+                </div>
+                <div class="slide">
+                    <img src="fisioterapia3.jpg" alt="Atendimento personalizado" />
+                    <p class="legenda">Atendimento personalizado</p>
+                </div>
+
+                <button class="prev" aria-label="Slide anterior">&#10094;</button>
+                <button class="next" aria-label="Próximo slide">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Clinic Flow. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

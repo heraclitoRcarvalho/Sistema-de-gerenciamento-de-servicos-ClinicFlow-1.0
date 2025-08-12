@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendamento - Clinic Flow</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>Clinic Flow</h1>
+      <img src="logo.png" alt="Logo da Clinic Flow" class="logo" />
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="agendamento.html">Agendar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                        <!-- Aqui adiciona o login -->
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <button class="menu-toggle">&#9776;</button>
+                </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="formulario-agendamento fade-in">
+      <div class="container">
+        <h2>Agende sua Consulta</h2>
+        <p>Preencha os dados abaixo para solicitar seu atendimento.</p>
+        <form id="form-agendamento">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required autocomplete="tel" placeholder="(99) 99999-9999" />
+          </div>
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required min="08:00" max="18:00" />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Observações</label>
+            <textarea
+              id="mensagem"
+              name="observacoes"
+              maxlength="500"
+              placeholder="Informe detalhes adicionais se necessário..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-agendar">Enviar Agendamento</button>
+        </form>
+        <p id="mensagemEnvio" class="mensagem-envio"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Clinic Flow. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

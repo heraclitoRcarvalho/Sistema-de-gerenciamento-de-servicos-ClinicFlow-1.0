@@ -1,0 +1,178 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  background-color: #2E86C1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #2E86C1;
+  margin-bottom: 20px;
+}
+
+.agendamentos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.agendamento-card {
+  background-color: white;
+  border-left: 5px solid #2E86C1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.agendamento-card:hover {
+  transform: scale(1.01);
+}
+
+/* Select de status */
+.status-select {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #eef3f7;
+  cursor: pointer;
+}
+
+/* Filtros */
+#filtro-horario,
+#filtro-nome-data,
+#ordenacao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+#filtro-horario label,
+#filtro-nome-data label,
+#ordenacao label {
+  font-weight: bold;
+  color: #2E86C1;
+}
+
+#horaInicio, #horaFim,
+#filtro-nome, #filtro-data,
+#ordenarPor {
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  transition: border-color 0.3s;
+}
+
+#horaInicio:focus, #horaFim:focus,
+#filtro-nome:focus, #filtro-data:focus,
+#ordenarPor:focus {
+  border-color: #2E86C1;
+  outline: none;
+}
+
+/* Botões */
+#aplicarFiltro, #limparFiltro {
+  background-color: #2E86C1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#aplicarFiltro:hover, #limparFiltro:hover {
+  background-color: #1B4F72;
+}
+
+/* Seções */
+.agendamento-secao {
+  margin-top: 30px;
+}
+
+.agendamento-secao h3 {
+  color: #1B4F72;
+  margin-bottom: 10px;
+}
+
+/* Cores dos cards por status */
+#agendamentos-cancelados .agendamento-card {
+  border-left-color: #C0392B;
+}
+
+#agendamentos-andamento .agendamento-card {
+  border-left-color: #2E86C1;
+}
+
+#agendamentos-concluidos .agendamento-card {
+  border-left-color: #27AE60;
+}
+
+#agendamentos-container .agendamento-card {
+  border-left-color: #F1C40F;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .status-select {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .agendamento-card {
+    padding: 10px;
+  }
+
+  #filtro-horario,
+  #filtro-nome-data,
+  #ordenacao {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
